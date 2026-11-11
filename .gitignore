@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.astro/
+.wrangler/
+config.local.json
+wrangler.local.jsonc
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+src/generated/
+workers/booking/src/generated/
+coverage/
+.benchmark/
+*.log
+.DS_Store

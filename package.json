@@ -1,0 +1,30 @@
+{
+  "name": "tss-better-booking",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "configure": "node scripts/configure.mjs",
+    "dev": "npm run configure && astro dev",
+    "build": "npm run configure && astro build && node scripts/verify-build.mjs",
+    "preview": "astro preview",
+    "test": "node scripts/test.mjs",
+    "check": "npm run configure && node --check workers/booking/src/index.mjs && node --check workers/booking/src/session.mjs && node --check workers/booking/src/browser.mjs",
+    "dev:worker": "npm run build && wrangler dev --config wrangler.local.jsonc",
+    "deploy": "npm run build && node scripts/configure.mjs --deploy && wrangler deploy --config wrangler.local.jsonc",
+    "benchmark": "node scripts/benchmark.mjs"
+  },
+  "dependencies": {
+    "@cloudflare/puppeteer": "2.0.0",
+    "@fontsource/source-sans-3": "5.3.0",
+    "@fontsource/teko": "5.3.0",
+    "astro": "7.4.11"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "wrangler": "4.160.0"
+  }
+}

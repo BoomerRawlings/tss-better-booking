@@ -1,0 +1,104 @@
+---
+import '@fontsource/source-sans-3/latin-400.css';
+import '@fontsource/source-sans-3/latin-600.css';
+import '@fontsource/teko/latin-500.css';
+import '../../styles/booking.css';
+import '../../styles/surf.css';
+import '../../styles/hologram.css';
+import config from '../../generated/public-config.mjs';
+const { site, people } = config;
+const demo = site.demo === true;
+const inspectRoute = people.flatMap(person => person.courses.flatMap(course => course.options))[0]?.route;
+const days = { M: 'Monday', T: 'Tuesday', W: 'Wednesday', R: 'Thursday', F: 'Friday', S: 'Saturday', U: 'Sunday' };
+const dayLabel = (day) => days[day] || day;
+const meetingWhen = (meeting) => [meeting.date, (meeting.days || (meeting.day ? [meeting.day] : [])).map(dayLabel).join(', ')].filter(Boolean).join(' · ') || 'Date to be confirmed';
+const meetingTime = (meeting) => [meeting.startTime, meeting.endTime].filter(Boolean).join('–') || 'Time to be confirmed';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'" />
+    <meta name="theme-color" content="#0f1d30" />
+    <meta name="description" content="A self-hosted course booking interface. Sign in, choose a verified section, and follow the enrollment result." />
+    <title>{site.title}</title>
+  </head>
+  <body class="profile-shell" data-demo={String(demo)}>
+    <a class="skip" href="#courses">Skip to courses</a>
+    <main class="booking-library">
+      <header class="intro">
+        <p class="eyebrow"><span class="signal" aria-hidden="true">///</span> {site.term || 'YOUR COURSE PLAN'}</p>
+        <h1>{site.title}</h1>
+        <p class="intro-copy">A shorter path from your course plan to Book.</p>
+        <div class="booking-steps" aria-label="How to book">
+          <p><span class="step" aria-hidden="true">01</span><span><span class="visually-hidden">Step one: </span><button type="button" class="login" data-tss-login disabled>Sign in with UCSD</button></span></p>
+          <p><span class="step" aria-hidden="true">02</span><span><span class="visually-hidden">Step two: </span>Click <span class="tss-book-inner">Book</span> below.</span></p>
+          <p><span class="step" aria-hidden="true">03</span><span><span class="visually-hidden">Step three: </span>Follow the result. Keep the good part of your day.</span></p>
+        </div>
+        <section class="tss-session" data-tss-session data-tss-inspect-route={inspectRoute} data-state={demo ? 'signed_out' : 'checking'} aria-label="TSS connection">
+          <div class="session-line">
+            <span class="tss-session-status" role="status" aria-live="polite" data-tss-session-status><span class="tss-account-name" data-tss-account-name hidden></span><span data-tss-status-message>{demo ? 'Template preview · no live connection' : 'Checking sign-in…'}</span></span>
+            <button type="button" data-tss-logout hidden>Sign out</button>
+            <button type="button" data-tss-inspect hidden>Check session</button>
+          </div>
+          <p class="session-note">{demo ? 'Example profiles and courses. Configure your own deployment before connecting to TSS.' : 'Sign-in opens in an isolated Cloudflare-hosted browser. Your authenticated account determines who books, regardless of the profile selected below.'}</p>
+          <p class="probe-note" data-tss-probe-note>{demo ? 'Preview only — all booking controls are disabled.' : 'Read-only setup — booking unavailable.'}</p>
+          <p class="tss-job-status" role="status" aria-live="polite" data-tss-job-status></p>
+          <button type="button" data-tss-review hidden>Review in TSS</button>
+          <div class="tss-warning" data-tss-warning hidden>
+            <p data-tss-warning-message></p>
+            <button type="button" data-tss-confirm>Confirm booking</button>
+            <button type="button" data-tss-cancel>Cancel booking</button>
+          </div>
+        </section>
+      </header>
+
+      <section id="courses" aria-label="Course plans">
+        <div class="toolbar">
+          <div class="profile-filter"><label for="profile-select">Profile</label><select id="profile-select" data-profile-filter aria-controls="profile-collection"><option value="all">All profiles</option>{people.map(person => <option value={person.id}>{person.name}</option>)}</select></div>
+          <button type="button" class="expand" data-expand-profiles aria-controls="profile-collection">Expand all</button>
+        </div>
+        <p class="visually-hidden" role="status" aria-live="polite" data-profile-status>Showing all {people.length} profiles.</p>
+        <div id="profile-collection">
+          {people.map((person, index) => (
+            <details class="profile-card" data-profile-card data-profile-id={person.id} open={index === 0}>
+              <summary>
+                <span class="profile-mark" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                <span class="profile-heading"><small>{person.major || 'Course plan'}</small><strong>{person.name}</strong></span>
+                <span class="profile-count">{person.courses.length} {person.courses.length === 1 ? 'course' : 'courses'}</span>
+                <span class="disclosure-icon" aria-hidden="true">+</span>
+              </summary>
+              <div class="profile-courses">
+                {person.courses.length === 0 && <p class="empty">Add courses to this profile in your local configuration.</p>}
+                {person.courses.map(course => (
+                  <details class="course-options" data-course-options open>
+                    <summary class="course-heading"><span class="category">{course.category}</span><span><strong>{course.title}</strong><small>{course.code} · {course.options.length} {course.options.length === 1 ? 'option' : 'options'}</small></span><span class="disclosure-icon" aria-hidden="true">+</span></summary>
+                    <div class="course-options-content">
+                      {course.options.map(option => (
+                        <section class="booking-option" aria-label={`${course.code}: ${option.label}`}>
+                          <div class="option-heading"><div><h2>{option.label}</h2><span class="option-state">{demo ? 'Example option' : option.verified ? 'Verified route' : 'Route awaiting verification'}</span></div><button class="tss-book" type="button" data-tss-book data-book-route={option.route} disabled={demo || !option.verified} aria-label={`Book ${course.title}, ${option.label}`}><span class="tss-book-inner">Book</span></button></div>
+                          <p class="instructors"><span>Instructor</span> {(option.instructors || []).join(', ') || 'To be confirmed'}</p>
+                          <div class="meetings">
+                            {(option.meetings || []).map(meeting => <div class="meeting"><span class="meeting-kind">{meeting.kind || 'Class'}</span><div><strong>{meetingWhen(meeting)}</strong><span>{meetingTime(meeting)}</span>{(meeting.startDate || meeting.endDate) && <small>{[meeting.startDate, meeting.endDate].filter(Boolean).join(' – ')}</small>}</div><div class="location"><small>Location</small><span>{meeting.location || 'To be confirmed'}</span></div></div>)}
+                            {!option.meetings?.length && <p class="empty">Meeting details not added yet.</p>}
+                          </div>
+                          <p class="tss-option-feedback" role="status" aria-live="polite" data-tss-feedback></p>
+                        </section>
+                      ))}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
+      <footer><p>Unofficial, independent tool. TSS controls eligibility and enrollment. A submitted request is not a confirmed booking.</p><p>Times use the configured course timezone. Sign out when finished.</p></footer>
+    </main>
+    <script>import '../../scripts/profiles';</script>
+    <script>import '../../scripts/tss-session';</script>
+  </body>
+</html>

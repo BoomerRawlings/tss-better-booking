@@ -1,0 +1,88 @@
+{
+  "site": {
+    "title": "TSS Better Booking",
+    "term": "Example term",
+    "origin": "https://booking.example.org",
+    "demo": true
+  },
+  "auth": {
+    "duoOrigin": "https://api-00000000.duosecurity.com"
+  },
+  "service": {
+    "probeOnly": true,
+    "directBookingEnabled": false,
+    "maxBrowserSessions": 1,
+    "maxSessionMinutes": 15,
+    "monthlyBrowserMinutes": 90
+  },
+  "people": [
+    {
+      "id": "king-triton",
+      "name": "King Triton",
+      "major": "Example major",
+      "courses": [
+        {
+          "code": "EXAMPLE-101",
+          "title": "Sample course — configure your own classes",
+          "category": "Example subject",
+          "options": [
+            {
+              "label": "Sample lecture + discussion",
+              "moduleId": "900001",
+              "packageId": "910001",
+              "year": "2099",
+              "session": "1",
+              "instructors": [
+                "Example Instructor"
+              ],
+              "meetings": [
+                {
+                  "kind": "Lecture",
+                  "days": [
+                    "Monday",
+                    "Wednesday"
+                  ],
+                  "startTime": "10:00",
+                  "endTime": "10:50",
+                  "startDate": "2099-01-01",
+                  "endDate": "2099-03-01",
+                  "location": "Example Hall"
+                },
+                {
+                  "kind": "Discussion",
+                  "days": [
+                    "Friday"
+                  ],
+                  "startTime": "11:00",
+                  "endTime": "11:50",
+                  "location": "Example Room"
+                },
+                {
+                  "kind": "Final exam",
+                  "date": "2099-03-10",
+                  "startTime": "09:00",
+                  "endTime": "11:59",
+                  "location": "Example Hall"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person-2",
+      "name": "Person 2",
+      "major": "Example major",
+      "courses": []
+    },
+    {
+      "id": "person-3",
+      "name": "Person 3",
+      "major": "Example major",
+      "courses": []
+    }
+  ],
+  "catalogLookups": [],
+  "trustedRoutes": []
+}

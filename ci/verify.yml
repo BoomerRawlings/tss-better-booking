@@ -1,0 +1,30 @@
+name: Verify template
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Test with isolated browser fixtures
+        shell: bash
+        run: |
+          export TBB_TEST_CHROME="$(command -v google-chrome || command -v chromium || true)"
+          export TBB_TEST_OPENSSL="$(command -v openssl)"
+          test -n "$TBB_TEST_CHROME"
+          npm test
+      - run: npm run build
+      - run: npm run check
+      - name: Package without deploying
+        run: npx wrangler deploy --dry-run --config wrangler.local.jsonc --outdir .wrangler/dry-run

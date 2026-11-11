@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="500" viewBox="0 0 1100 500" role="img" aria-labelledby="flow-title flow-description">
+  <title id="flow-title">TSS Better Booking: a shorter visible path</title>
+  <desc id="flow-description">An illustrative native TSS path is Sign in, Find course and term, Choose package, Go to Booking, Load booking page, then Book. Three amber diamonds mark possible hold points, not measured failures. Better Booking presents Sign in then Book for a previously verified option. Authentication, registration checks, warning review, Save, and outcome verification still happen. This diagram compares visible actions, not request counts or elapsed time.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#162b41"/><stop offset="1" stop-color="#0d1a2c"/></linearGradient>
+  </defs>
+  <rect x="1" y="1" width="1098" height="498" rx="12" fill="url(#panel)" stroke="#385167"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="44" y="43" fill="#f7f2e6" font-size="26" font-weight="700">Keep the first step. Get to the last.</text>
+    <text x="44" y="66" fill="#9fb5c7" font-size="14">The screens and actions you interact with — the booking rules still apply.</text>
+    <text x="44" y="107" fill="#c4d6df" font-size="17" font-weight="700">THROUGH TSS</text>
+    <path d="M877 98 l4 4 -4 4 -4 -4 Z" fill="#2b2a24" stroke="#e9b650"/>
+    <text x="891" y="107" fill="#b8b6a8" font-size="13">Possible hold point</text>
+    <path d="M120 181 H970" fill="none" stroke="#5e7489" stroke-width="2"/>
+
+    <g transform="translate(44 128)">
+      <rect width="152" height="106" rx="4" fill="#193145" stroke="#668e96"/>
+      <text x="14" y="23" fill="#8fb6bf" font-size="11">01</text>
+      <text x="14" y="51" fill="#b7efea" font-size="17" font-weight="700">Sign in</text>
+      <text x="14" y="75" fill="#9fb5c7" font-size="12">Your UCSD account</text>
+    </g>
+    <g transform="translate(214 128)">
+      <rect width="152" height="106" rx="4" fill="#122237" stroke="#3f5368"/>
+      <text x="14" y="23" fill="#8299af" font-size="11">02</text>
+      <text x="14" y="51" fill="#c3d0dd" font-size="16" font-weight="700">Find course</text>
+      <text x="14" y="71" fill="#c3d0dd" font-size="16" font-weight="700">+ term</text>
+      <text x="14" y="92" fill="#9fb5c7" font-size="12">Catalog search</text>
+      <path d="M138 -7 l7 7 -7 7 -7 -7 Z" fill="#2b2a24" stroke="#e9b650"/><circle cx="138" cy="0" r="1.5" fill="#f1c466"/>
+    </g>
+    <g transform="translate(384 128)">
+      <rect width="152" height="106" rx="4" fill="#122237" stroke="#3f5368"/>
+      <text x="14" y="23" fill="#8299af" font-size="11">03</text>
+      <text x="14" y="51" fill="#c3d0dd" font-size="16" font-weight="700">Choose</text>
+      <text x="14" y="71" fill="#c3d0dd" font-size="16" font-weight="700">package</text>
+      <text x="14" y="92" fill="#9fb5c7" font-size="12">Linked sections</text>
+    </g>
+    <g transform="translate(554 128)">
+      <rect width="152" height="106" rx="4" fill="#122237" stroke="#3f5368"/>
+      <text x="14" y="23" fill="#8299af" font-size="11">04</text>
+      <text x="14" y="51" fill="#c3d0dd" font-size="16" font-weight="700">Go to Booking</text>
+      <text x="14" y="75" fill="#9fb5c7" font-size="12">Open another view</text>
+      <path d="M138 -7 l7 7 -7 7 -7 -7 Z" fill="#2b2a24" stroke="#e9b650"/><circle cx="138" cy="0" r="1.5" fill="#f1c466"/>
+    </g>
+    <g transform="translate(724 128)">
+      <rect width="152" height="106" rx="4" fill="#122237" stroke="#3f5368"/>
+      <text x="14" y="23" fill="#8299af" font-size="11">05</text>
+      <text x="14" y="51" fill="#c3d0dd" font-size="16" font-weight="700">Load booking</text>
+      <text x="14" y="71" fill="#c3d0dd" font-size="16" font-weight="700">page</text>
+      <text x="14" y="92" fill="#9fb5c7" font-size="12">Course context</text>
+      <path d="M138 -7 l7 7 -7 7 -7 -7 Z" fill="#2b2a24" stroke="#e9b650"/><circle cx="138" cy="0" r="1.5" fill="#f1c466"/>
+    </g>
+    <g transform="translate(894 128)">
+      <rect width="152" height="106" rx="4" fill="#193145" stroke="#668e96"/>
+      <text x="14" y="23" fill="#8fb6bf" font-size="11">06</text>
+      <text x="14" y="51" fill="#b7efea" font-size="17" font-weight="700">Book</text>
+      <text x="14" y="75" fill="#9fb5c7" font-size="12">Request enrollment</text>
+    </g>
+
+    <path d="M44 270 H334 M766 270 H1046" stroke="#4e6377" stroke-dasharray="4 5" fill="none"/>
+    <text x="550" y="275" fill="#9fb5c7" font-size="13" text-anchor="middle">Navigation screens skipped</text>
+    <text x="44" y="308" fill="#ffdf61" font-size="17" font-weight="700">WITH BETTER BOOKING</text>
+    <text x="1046" y="308" fill="#9fb5c7" font-size="13" text-anchor="end">Your course options are already here</text>
+    <path d="M120 373 H970" fill="none" stroke="#e7c553" stroke-width="2"/>
+    <path d="M878 369 l5 4 -5 4" fill="none" stroke="#e7c553" stroke-width="2"/>
+    <g transform="translate(44 326)">
+      <rect width="152" height="94" rx="4" fill="#19353e" stroke="#739c9e"/>
+      <text x="14" y="23" fill="#91c7c5" font-size="11">01</text>
+      <text x="14" y="49" fill="#b7efea" font-size="19" font-weight="700">Sign in</text>
+      <text x="14" y="74" fill="#a6c2ca" font-size="12">One owned session</text>
+    </g>
+    <rect x="320" y="344" width="460" height="57" rx="4" fill="#112237"/>
+    <text x="550" y="366" fill="#e6d48d" font-size="17" text-anchor="middle">Straight to the booking action</text>
+    <text x="550" y="388" fill="#9fb5c7" font-size="13" text-anchor="middle">without reopening the catalog and booking page</text>
+    <g transform="translate(894 326)">
+      <rect width="152" height="94" rx="4" fill="#3b3521" stroke="#c2a43d"/>
+      <text x="14" y="23" fill="#ffdf61" font-size="11">02</text>
+      <text x="14" y="49" fill="#ffdf61" font-size="19" font-weight="700">Book</text>
+      <path d="M125 37 h12 v12 M125 49 l12 -12" fill="none" stroke="#ffdf61" stroke-width="1.5"/>
+      <text x="14" y="74" fill="#d5c89e" font-size="12">Your verified option</text>
+    </g>
+    <path d="M44 440 H1046" stroke="#31485c"/>
+    <text x="44" y="461" fill="#c4d6df" font-size="13">Still required: authentication, registration checks, warning review, one Save, and outcome verification.</text>
+    <text x="44" y="482" fill="#9fb5c7" font-size="12">Hold points are illustrative. This is not a speed, request-count, or failure-rate measurement. The exact TSS path can vary.</text>
+  </g>
+</svg>

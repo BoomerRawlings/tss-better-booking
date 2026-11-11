@@ -1,0 +1,429 @@
+{
+  "site": {
+    "title": "TSS Better Booking",
+    "term": "Example term",
+    "origin": "https://booking.example.org",
+    "demo": true
+  },
+  "auth": {
+    "duoOrigin": "https://api-00000000.duosecurity.com"
+  },
+  "service": {
+    "probeOnly": true,
+    "directBookingEnabled": false,
+    "maxBrowserSessions": 1,
+    "maxSessionMinutes": 15,
+    "monthlyBrowserMinutes": 90
+  },
+  "people": [
+    {
+      "id": "fixture",
+      "name": "Synthetic Learner",
+      "major": "Synthetic major",
+      "courses": [
+        {
+          "code": "EXAMPLE-101",
+          "title": "Synthetic course 1",
+          "category": "Synthetic subject",
+          "options": [
+            {
+              "label": "Synthetic option 1",
+              "moduleId": "900001",
+              "packageId": "910001",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            }
+          ]
+        },
+        {
+          "code": "EXAMPLE-102",
+          "title": "Synthetic course 2",
+          "category": "Synthetic subject",
+          "options": [
+            {
+              "label": "Synthetic option 2",
+              "moduleId": "900002",
+              "packageId": "910002",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            }
+          ]
+        },
+        {
+          "code": "EXAMPLE-103",
+          "title": "Synthetic course 3",
+          "category": "Synthetic subject",
+          "options": [
+            {
+              "label": "Synthetic option 3",
+              "moduleId": "900003",
+              "packageId": "910003",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            }
+          ]
+        },
+        {
+          "code": "EXAMPLE-104",
+          "title": "Synthetic course 4",
+          "category": "Synthetic subject",
+          "options": [
+            {
+              "label": "Synthetic option 4",
+              "moduleId": "900004",
+              "packageId": "910004",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            }
+          ]
+        },
+        {
+          "code": "EXAMPLE-105",
+          "title": "Synthetic course 5",
+          "category": "Synthetic subject",
+          "options": [
+            {
+              "label": "Synthetic option 5",
+              "moduleId": "900005",
+              "packageId": "910005",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            }
+          ]
+        },
+        {
+          "code": "EXAMPLE-106",
+          "title": "Synthetic course 6",
+          "category": "Synthetic subject",
+          "options": [
+            {
+              "label": "Synthetic option 6",
+              "moduleId": "900006",
+              "packageId": "910006",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            },
+            {
+              "label": "Synthetic option 7",
+              "moduleId": "900006",
+              "packageId": "910007",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            },
+            {
+              "label": "Synthetic option 8",
+              "moduleId": "900006",
+              "packageId": "910008",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            },
+            {
+              "label": "Synthetic option 9",
+              "moduleId": "900006",
+              "packageId": "910009",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            }
+          ]
+        },
+        {
+          "code": "EXAMPLE-107",
+          "title": "Synthetic course 7",
+          "category": "Synthetic subject",
+          "options": [
+            {
+              "label": "Synthetic option 10",
+              "moduleId": "900007",
+              "packageId": "910010",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            },
+            {
+              "label": "Synthetic option 11",
+              "moduleId": "900007",
+              "packageId": "910011",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            },
+            {
+              "label": "Synthetic option 12",
+              "moduleId": "900007",
+              "packageId": "910012",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            },
+            {
+              "label": "Synthetic option 13",
+              "moduleId": "900007",
+              "packageId": "910013",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            },
+            {
+              "label": "Synthetic option 14",
+              "moduleId": "900007",
+              "packageId": "910014",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            },
+            {
+              "label": "Synthetic option 15",
+              "moduleId": "900007",
+              "packageId": "910015",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            },
+            {
+              "label": "Synthetic option 16",
+              "moduleId": "900007",
+              "packageId": "910016",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            },
+            {
+              "label": "Synthetic option 17",
+              "moduleId": "900007",
+              "packageId": "910017",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            }
+          ]
+        },
+        {
+          "code": "EXAMPLE-108",
+          "title": "Synthetic course 8",
+          "category": "Synthetic subject",
+          "options": [
+            {
+              "label": "Synthetic option 18",
+              "moduleId": "900008",
+              "packageId": "910018",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            },
+            {
+              "label": "Synthetic option 19",
+              "moduleId": "900008",
+              "packageId": "910019",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            },
+            {
+              "label": "Synthetic option 20",
+              "moduleId": "900008",
+              "packageId": "910020",
+              "year": "2099",
+              "session": "1",
+              "meetings": [],
+              "instructors": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "catalogLookups": [
+    "EXAMPLE-107",
+    "EXAMPLE-108"
+  ],
+  "trustedRoutes": [
+    {
+      "courseCode": "EXAMPLE-101",
+      "moduleId": "900001",
+      "packageId": "910001",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-102",
+      "moduleId": "900002",
+      "packageId": "910002",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-103",
+      "moduleId": "900003",
+      "packageId": "910003",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-104",
+      "moduleId": "900004",
+      "packageId": "910004",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-105",
+      "moduleId": "900005",
+      "packageId": "910005",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-106",
+      "moduleId": "900006",
+      "packageId": "910006",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-106",
+      "moduleId": "900006",
+      "packageId": "910007",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-106",
+      "moduleId": "900006",
+      "packageId": "910008",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-106",
+      "moduleId": "900006",
+      "packageId": "910009",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-107",
+      "moduleId": "900007",
+      "packageId": "910010",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-107",
+      "moduleId": "900007",
+      "packageId": "910011",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-107",
+      "moduleId": "900007",
+      "packageId": "910012",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-107",
+      "moduleId": "900007",
+      "packageId": "910013",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-107",
+      "moduleId": "900007",
+      "packageId": "910014",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-107",
+      "moduleId": "900007",
+      "packageId": "910015",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-107",
+      "moduleId": "900007",
+      "packageId": "910016",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-107",
+      "moduleId": "900007",
+      "packageId": "910017",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-108",
+      "moduleId": "900008",
+      "packageId": "910018",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-108",
+      "moduleId": "900008",
+      "packageId": "910019",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    },
+    {
+      "courseCode": "EXAMPLE-108",
+      "moduleId": "900008",
+      "packageId": "910020",
+      "year": "2099",
+      "session": "1",
+      "evidence": "Synthetic test fixture only; never an observed university route."
+    }
+  ]
+}
