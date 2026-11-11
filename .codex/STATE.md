@@ -1,7 +1,7 @@
 # Project state
 
 - Mode: new project. Objective: reusable, independent TSS booking template and agent-guided deployment.
-- Status: release verified; publication in progress. Example profiles only; no real course selections, account data, deployment identity, or imported Git history.
+- Status: published as a public GitHub template. Example profiles only; no real course selections, account data, deployment identity, or imported Git history. Remote file tree and neutral initial commit verified; published README, benchmark, plain-English guide, and SVG match local source.
 - Defaults: no-network demo, probe-only service, direct submission off, no trusted routes. Live configuration and generated files ignored. Profile display data becomes public if deployed.
 - Architecture: static Astro frontend + same-origin Worker API, isolated Browser Run sessions, Durable Object ownership/quotas, exact route allowlist, direct registration check/save with warning review and outcome verification.
 - Verified: 276 local tests, zero skips including isolated Chromium fixtures; build and Worker dry-run passed. Demo frontend performs no API calls. Direct-off API/controller gate and per-term write validation covered. Independent privacy review passed.
